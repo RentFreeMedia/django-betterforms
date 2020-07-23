@@ -69,7 +69,7 @@ def flatten(elements):
     iterable of strings.
     """
     for element in elements:
-        if isinstance(element, collections.Iterable) and not isinstance(element, six.string_types):
+                if isinstance(element, collections.abc.Iterable) and not isinstance(element, six.string_types):
             for sub_element in flatten(element):
                 yield sub_element
         else:
